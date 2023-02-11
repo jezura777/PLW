@@ -65,7 +65,7 @@ const observer = new IntersectionObserver((entries) => {
     });
 });
 
-document.querySelectorAll('#drone_hobby_yt_video, #lego_hobby_yt_video, #three_section').forEach((el) => {
+document.querySelectorAll('').forEach((el) => {
     if (el) {
         observer.observe(el)
     }
