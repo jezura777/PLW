@@ -1,3 +1,10 @@
+// ctrl + shift + P
+
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';}
+window.scrollTo(0, 0);
+
+
 
 var positions_of_animation = []//elements
 for (let i = 0, max = positions_of_animation.length; i < max; i++) {
@@ -37,10 +44,31 @@ function setbetweenlimit(firstbetwwenlimit, secondbetwwenlimit, value) {
 
 window.addEventListener("scroll", function () {
 
-
     //(animate_element(0.75,                                                      0,           200,       0,         200,        scroll_js,      ) * -1)
     //                 value 0-1 0=zadna zmena 1=animace zacne nahore off screen, start value, end value, min value, max value,  id of element,  ) * -1/1 invertn/not invert
     //(animate_element(offset - defalt=0,                                         start value, /speed,    min value, max value,  id of element,  ) * -1/1 invertn/not invert
 
+});
 
+
+
+
+
+
+
+
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            //console.log(entry.target.id)
+        }
+    });
+});
+
+document.querySelectorAll('').forEach((el) => {
+    if (el) {
+        observer.observe(el)
+    }
 });
