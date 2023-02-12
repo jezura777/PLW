@@ -1,0 +1,16 @@
+---
+export interface Props {
+	section: string;
+    user: string;
+}
+const { section, user = "Anon" } = Astro.props;
+---
+
+<h2 id="section" class="text-3xl bg-slate-800 rounded-md p-4 m-4 shadow-xl pointer-events-none" style="color: #00CC00;background: linear-gradient(118deg, rgba(30,41,59,1) 0%, rgba(103,94,125,0.25) 100%);">
+    <code>
+        <span class="bg-clip-text text-transparent" style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, rgba(12,116,117,1) 90% );">
+            <i class="fa-solid fa-terminal rounded bg-slate-700 p-4" style="color: rgba(14,174,87,1);"></i>
+            [{user}@PixelLogic]:$ {section}
+        </span>
+    </code>
+</h2>
