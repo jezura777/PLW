@@ -6,8 +6,20 @@ import Tty from '../components/bgtty.astro';
 <Layout title="">
 
 	<main class="h-screen flex flex-row mx-8 overflow-y-hidden">
-		<div class="flex flex-col justify-center pointer-events-none">
-			<Tty section="HTML"/>
+		<div class="flex flex-col justify-center">
+			<div class="pointer-events-none z-10">
+				<Tty section="HTML"/>
+			</div>
 		</div>
+		<div class="flex flex-col justify-center hc">
+			<div class="pointer-events-none z-0 translate-x-36 shadow-inherit">
+				<div class="heart"></div>
+				<div class="shadow1"></div>
+				<div class="shadow2"></div>
+				<div class="shadow3"></div>
+				<div class="shadow4"></div>
+			</div>
+		</div>
+
 	</main>
 </Layout>
