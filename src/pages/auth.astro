@@ -1,0 +1,33 @@
+---
+import { onMount } from 'svelte'
+import { supabase } from '../scripts/client'
+import type { AuthSession } from '@supabase/supabase-js'
+import Account from '../components/account.astro'
+import Auth from '../components/login.astro'
+
+let session: AuthSession
+
+onMount(() => {
+	supabase.auth.getSession().then(({ data }) => {
+	session = data.session
+	})
+
+	supabase.auth.onAuthStateChange((_event, _session) => {
+	session = _session
+	})
+})
+
+isMount(() => {
+	if (!session) {
+		return <Auth />
+	} else {
+		return <Account />
+
+	}
+})
+---
+  
+<div class="container" style="padding: 50px 0 100px 0">
+	{isMount()}
+</div>
+
