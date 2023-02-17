@@ -1,13 +1,17 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Tty from '../components/bgtty.astro'
+import Tty from '../components/bgtty.astro';
+import Ip from '../components/indexp.astro';
 ---
 
 <Layout title="">
 
-	<main class="h-screen flex flex-row mx-8 overflow-y-hidden">
+	<main class="h-screen  mx-8 overflow-y-hidden">
 		<div class="flex flex-col justify-center pointer-events-none">
 			<Tty section="HTML"/>
+		</div>
+		<div class="flex">
+			<Ip text="hello nice to mmet you. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem harum autem doloremque corrupti asperiores optio commodi vitae quisquam perspiciatis esse sunt sint, architecto magnam. Tempora fuga numquam cum deserunt delectus."/>
 		</div>
 	</main>
 </Layout>
