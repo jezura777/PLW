@@ -6,7 +6,7 @@ export interface Props {
 const { section, user = "Anon" } = Astro.props;
 ---
 
-<h2 id="section" class="text-3xl bg-slate-800 rounded-md p-4 m-4 shadow-xl pointer-events-none" style="color: #00CC00;background: linear-gradient(118deg, rgba(30,41,59,1) 0%, #1A2537 100%);">
+<h2 id="section" class="text-3xl bg-slate-800 rounded-md p-4 m-4 shadow-xl pointer-events-none scale-100 max-md:scale-0" style="color: #00CC00;background: linear-gradient(118deg, rgba(30,41,59,1) 0%, #1A2537 100%);">
     <code>
         <span class="bg-clip-text text-transparent" style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(14,174,87,1) 0%, #009C72 90% );">
             <i class="fa-solid fa-terminal rounded p-4" style="color: rgba(14,174,87,1); background: linear-gradient(118deg, rgba(103,94,125,0.1) 0%, rgba(30,41,59,0.1) 100%);"></i>
